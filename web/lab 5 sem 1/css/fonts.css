@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Comforter";
+
+  src: url("../fonts/Comforter-Regular.ttf");
+}
+
+h1{
+  font-family: "Comforter";
+  font-size: 40px;
+}
