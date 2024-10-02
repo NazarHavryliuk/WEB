@@ -1,0 +1,20 @@
+body{
+width: 600px;
+margin:0 auto;
+}
+.img-cat{
+    width:200px;
+    float:left;
+}
+table{
+    width: auto;
+    border:thin#000 double;
+}
+table td:first-child{
+    font-weight: bold;
+    width: 200px;
+}
+
+table td{
+    border:thin#000 double;
+}
