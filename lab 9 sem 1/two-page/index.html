@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="uk">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="Nazar Havryliuk">
+      <meta name="keywords" content="HTML, Meta Tags, Metadata">
+      <meta name="description" content="Тестування веб-сторіки">
+      <meta name="robots" content="noindex, nofollow">
+      <title>bootstrap 5</title>
+      <link href="../css/bootstrap.css" rel="stylesheet">
+      <link href="../css/mystyle.css" rel="stylesheet">
+      <style>
+         .get-line{
+         height: 100px;
+         }
+         body{
+         background: #fff;
+         }
+         .block{
+         background: #CDCDCD;
+         }
+         h1{
+         text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container block">
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+               <li class="breadcrumb-item active" aria-current="page">2 Page</li>
+            </ol>
+         </nav>
+      </div>
+      <div class="container block">
+         <h1>Сторінка №2</h1>
+         <div class="get-line"></div>
+         <div class="row">
+            <div class="col">
+               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                  </li>
+               </ul>
+               <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Home</div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Profile</div>
+                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Contact</div>
+               </div>
+            </div>
+            <div class="col">
+               <p>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Кнопка 1
+                  </a>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                  Кнопка 2
+                  </button>
+               </p>
+               <div class="collapse" id="collapseExample1">
+                  <div class="card card-body">
+                     Олександр Усик – український боксер, який завоював титул абсолютного чемпіона у важкій вазі, а згодом перейшов у суперважку вагу. Він відомий своєю технічною майстерністю, швидкістю та універсальністю в рингу, володіє титулами WBA, WBO, IBF і IBO в суперважкій вазі.                
+                  </div>
+               </div>
+               <div class="collapse" id="collapseExample2">
+                  <div class="card card-body">
+                     Тайсон Ф’юрі – британський боксер, який вважається одним з найкращих бійців сучасності. Він двічі завойовував титул чемпіона світу у суперважкій вазі і є володарем пояса WBC. Відомий своїм неймовірним ростом, майстерним захистом і психологічною стійкістю, Ф’юрі також прославився харизматичною особистістю.                
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <img src="../imges/boxing-img-2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>First slide label</h5>
+                           <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <img src="../imges/boxing-img.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Second slide label</h5>
+                           <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <img src="../imges/boxing-img-3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Third slide label</h5>
+                           <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="get-line""></div>
+         <br><br>
+         <div class="row">
+            <div class="col">
+               <button type="button" class="btn btn-warning">Warning</button>
+               <br><br>
+               <!-- Button trigger modal -->
+               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               відкрити модальне вікно              
+               </button>
+               <!-- Modal -->
+               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           Від боксу болить голова
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Зрозуміло</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <br> 
+               <button type="button" class="btn btn-danger">
+               ви маєте 6 повідомлень <span class="badge bg-primary">4</span>
+               </button>
+               <br><br>
+               <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+               </div>
+               <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                     <li><a class="dropdown-item" href="#">Action</a></li>
+                     <li><a class="dropdown-item" href="#">Another action</a></li>
+                     <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col">
+               <div class="card" style="width: 18rem;">
+                  <img src="../imges/boxer.svg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Назва картки</h5>
+                     <p class="card-text">Різні стилі боксу, такі як "панчер", "технарь" або "контрударник", демонструють різноманітність підходів у поєдинках, що робить цей спорт ще цікавішим.
+                     </p>
+                     <a href="#" class="btn btn-success">Читати далі</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: blueviolet; color: azure;">
+                        Пункт акардіону #1
+                        </button>
+                     </h2>
+                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <strong>Це корпус гармошки першого елемента.</strong> Для боксерів тренування включають не тільки удари, але й кардіо, силові вправи та розтяжку для підтримки загальної фізичної форми.
+                           Олімпійський бокс вважається вершиною аматорського спорту, де боксери змагаються за престижні медалі на міжнародному рівні.
+                           Бокс формує ментальну стійкість, адже перемога залежить не тільки від фізичної підготовки, але й від здатності тримати удар і приймати швидкі рішення.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Пункт акардіону #2
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <strong>Це корпус гармошки другого предмета.</strong> Відомі чемпіони боксу, такі як Мухаммед Алі та Майк Тайсон, стали легендами завдяки своїм унікальним стилям та непереможному духу.
+                           Бокс має дві основні дисципліни: аматорський та професійний. Аматорський більше орієнтований на техніку, тоді як у професійному важливіші сила й витривалість.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Пункт акардіону #3
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <strong>Бокс</strong> — це бойове мистецтво, яке розвиває силу, швидкість і витривалість. Він вимагає від спортсмена високої техніки і концентрації.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="../js/bootstrap.bundle.js"></script>
+   </body>
+</html>
