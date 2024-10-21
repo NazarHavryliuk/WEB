@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Обчислення куба і полінома</title>
+	</head>	
+	<body>
+		<script>
+			// Функція для обчислення куба числа
+			function kub(a) { 
+				return a * a * a;
+			}
+
+			// Функція для обчислення полінома
+			function polinom(a, k) { 
+				return k(a) + a + 10; // Використовуємо функцію kub для обчислення куба
+			}
+
+			let result = polinom(3, kub); // Передаємо число 3 і функцію kub
+			document.write("<h2> result = ", result, "</h2>");
+		</script>
+	</body>
+</html>

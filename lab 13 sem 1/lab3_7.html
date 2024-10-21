@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Приклад порівняння трьох чисел</title>
+	</head>	
+	<body>
+		<script>
+			let i = 7;
+			
+			// Функція, яка повертає найбільше значення серед трьох чисел
+			function findMax(a, b, c) { 
+				if (a > b && a > c) return a;
+				else if (b > a && b > c) return b;
+				else return c;
+			}
+
+			// Виведення значення змінної i
+			document.write("Значення змінної i: " + i.valueOf()); 
+
+			// Виведення результату функції findMax
+			let maxResult = findMax(15, 9, 23); // передаємо 15, 9, 23
+			document.write("<p>Найбільше число: " + maxResult);
+		</script>
+	</body>
+</html>

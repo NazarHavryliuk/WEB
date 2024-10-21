@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора FOR IN</title>
+	</head>	
+	<body>
+		<script> 
+			"use strict";		
+			// Об'єкт автомобіля
+			let car = {
+				brand: "Toyota",
+				model: "Camry6",
+				year: 2018,
+				color: "Black"
+			};
+
+			let carInfo = "";
+			// Перебір властивостей об'єкта car
+			for (let property in car) {
+				carInfo = property + ": " + car[property];
+				document.write(carInfo + "<br>");
+			}
+		</script>
+	</body>
+</html>

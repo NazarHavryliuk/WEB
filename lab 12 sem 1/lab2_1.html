@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визначення мови</title>
+</head>
+<body>
+    <button id="check-lang">Перевірити мову</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('check-lang').onclick = function() {
+            const lang = prompt('Введіть код мови (ua, en, pl, de):'); // Запит на введення коду мови
+            let languageName;
+
+            if (lang === "ua") {
+                languageName = "українська";
+            } else if (lang === "en") {
+                languageName = "англійська";
+            } else if (lang === "pl") {
+                languageName = "польська";
+            } else if (lang === "de") {
+                languageName = "німецька";
+            } else {
+                languageName = "Мову не визначено"; // Випадок, якщо значення невірне
+            }
+
+            document.getElementById('result').textContent = languageName; // Виведення результату на екран
+        };
+    </script>
+</body>
+</html>

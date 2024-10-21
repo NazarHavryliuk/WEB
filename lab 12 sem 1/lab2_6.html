@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Гра: Вгадай слово</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			const words = ["яблуко", "банан", "апельсин", "груша", "ківі"]; // масив слів
+			const randomIndex = Math.floor(Math.random() * words.length); // вибір випадкового індексу
+			const secretWord = words[randomIndex]; // вибране слово
+			let attempts = 0; 
+			let guessed = false; 
+			let answer = confirm("Зіграємо в гру 'Вгадай слово'?"); 
+			
+			if (answer) {
+				while (!guessed) {
+					let guess = prompt("Введіть слово (підказка: це фрукт)"); 
+					attempts++;
+					if (guess === secretWord) {
+						alert("Вітаємо! Ви вгадали слово: " + secretWord + "\nКількість спроб: " + attempts); 
+						guessed = true;
+					} else {
+						alert("Неправильно! Спробуйте ще раз.");
+					}
+				}
+			} else {
+				alert("Шкода.\nМоже бути в інший раз?");
+			}
+		</script>
+	</body>
+</html>

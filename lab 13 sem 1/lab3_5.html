@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Виведення тексту з кольором</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			function printColoredText(txt, color = "black") {
+				document.write(`<div style="color:${color}">${txt}</div>`);
+			}
+			
+			printColoredText("Цей текст червоного кольору", "red"); 
+			printColoredText("Цей текст синього кольору", "blue"); 
+			printColoredText("Цей текст чорного кольору (за замовчуванням)"); 
+			printColoredText("Цей текст зеленого кольору", "green");
+		</script>
+	</body>
+</html>

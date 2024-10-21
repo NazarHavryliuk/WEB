@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Поточна дата та вихідні</title>
+	</head>	
+	<body>
+		<script> 
+			"use strict";
+			let today = new Date(); // отримання поточної дати
+			let day = today.getDate(); // отримання дня місяця
+			let month = today.getMonth() + 1; // отримання місяця (0-11, тому додаємо 1)
+			let year = today.getFullYear(); // отримання року
+
+			// Форматування дати
+			if (day < 10) day = "0" + day; 
+			if (month < 10) month = "0" + month; 
+
+			let currentDate = day + "/" + month + "/" + year; // формат дати
+
+			// Перевірка, чи сьогодні вихідний
+			let isWeekend = (today.getDay() === 0 || today.getDay() === 6) ? "так" : "ні";
+
+			console.log("Поточна дата -", currentDate);
+			alert("Поточна дата - " + currentDate + "\nСьогодні вихідний? " + isWeekend);
+		</script>
+	</body>
+</html>
