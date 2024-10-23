@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4.4</title>
+</head>
+<body>
+<script>
+    let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+    let citrus = ['orange', 'lemon', 'lime'];
+
+    document.write('Масив fruits: ' + fruits.join(', ') + '<br>');
+    document.write('Масив citrus: ' + citrus.join(', ') + '<br>');
+
+    let combined = fruits.concat(citrus);
+    document.write('Об\'єднаний масив: ' + combined.join(', ') + '<br>');
+
+    fruits.splice(3, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+    document.write('Масив fruits після вставки: ' + fruits.join(', ') + '<br>');
+
+    fruits.splice(-3);
+    document.write('Масив fruits після видалення останніх 3 елементів: ' + fruits.join(', ') + '<br>');
+
+    let sortedFruits = [...fruits].sort();
+    document.write('Відсортований в алфавітному порядку масив fruits: ' + sortedFruits.join(', ') + '<br>');
+
+    let reverseSortedFruits = [...fruits].sort().reverse();
+    document.write('Масив fruits у зворотному алфавітному порядку: ' + reverseSortedFruits.join(', ') + '<br>');
+
+    let lengthSortedFruits = [...fruits].sort((a, b) => a.length - b.length);
+    document.write('Масив fruits, відсортований за довжиною слів: ' + lengthSortedFruits.join(', ') + '<br>');
+</script>
+</body>
+</html>

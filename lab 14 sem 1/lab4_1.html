@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4.1</title>
+</head>
+<body>
+    <script>
+        function generateTriangularNumbers() {
+            let Treag = [];
+            for (let n = 1; n <= 10; n++) {
+                Treag.push((n * (n + 1)) / 2);
+            }
+            return Treag;
+        }
+
+        function generateSquares() {
+            let kvd = [];
+            for (let n = 1; n <= 10; n++) {
+                kvd.push(n * n);
+            }
+            return kvd;
+        }
+
+        function combineAndSort() {
+            const Treag = generateTriangularNumbers();
+            const kvd = generateSquares();
+            let rez = Treag.concat(kvd);
+
+            rez.sort((a, b) => b - a);
+
+            document.getElementById("triangularNumbers").textContent = "Трикутні числа: " + Treag.join(" ");
+            document.getElementById("squares").textContent = "Квадрати: " + kvd.join(" ");
+            document.getElementById("combinedSorted").textContent = "Об'єднаний та відсортований масив: " + rez.join(" ");
+        }
+
+        window.onload = combineAndSort;
+    </script>
+
+    <h1>Результати завдання</h1>
+    <p id="triangularNumbers"></p>
+    <p id="squares"></p>
+    <p id="combinedSorted"></p>
+</body>
+</html>

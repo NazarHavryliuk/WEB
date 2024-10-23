@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заміна символів, пробілів та підрахунок слів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: blueviolet;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Заміна символів, пробілів та підрахунок</h1>
+    <input type="text" id="inputString" placeholder="Введіть рядок">
+    <button onclick="processString()">Обробити</button>
+    <h2>Результат:</h2>
+    <p id="modifiedSecondWord"></p>
+    <p id="wordsEndingWithE"></p>
+
+    <script>
+        function processString() {
+            const str = document.getElementById("inputString").value;
+
+            const words = str.split(/\s+/);
+
+            let modifiedSecondWord = '';
+            if (words.length > 1) {
+                modifiedSecondWord = words[1].split('').join(' ');
+            } else {
+                modifiedSecondWord = "Введіть більше слів!";
+            }
+
+            const wordsEndingWithE = words.filter(word => word.endsWith('е')).length;
+
+            document.getElementById("modifiedSecondWord").innerText = "Модифіковане друге слово: " + modifiedSecondWord;
+            document.getElementById("wordsEndingWithE").innerText = "Кількість слів, що закінчуються на 'е': " + wordsEndingWithE;
+        }
+    </script>
+</body>
+</html>

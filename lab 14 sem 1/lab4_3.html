@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Task 3</title>
+    <script>
+        function generateArray(size) {
+            let array = [];
+            for (let i = 0; i < size; i++) {
+                array.push(Math.floor(Math.random() * 100));
+            }
+            return array;
+        }
+
+        function performTask() {
+            const A = 50;
+            const array = generateArray(15);
+            let product = 1;
+            let count = 0;
+
+            document.getElementById("arrayOutput").innerText = "Масив: " + array.join(", ");
+
+            array.forEach((value, index) => {
+                if ((index + 1) % 4 === 0) {
+                    product *= value;
+                }
+
+                if (value <= A) {
+                    count++;
+                }
+            });
+
+            document.getElementById("productOutput").innerText = "Добуток чисел на позиціях, кратних 4: " + product;
+            document.getElementById("countOutput").innerText = "Кількість чисел, не більше за A: " + count;
+        }
+    </script>
+</head>
+<body onload="performTask()">
+    <h1>Завдання 3</h1>
+    <div id="arrayOutput"></div>
+    <div id="productOutput"></div>
+    <div id="countOutput"></div>
+</body>
+</html>

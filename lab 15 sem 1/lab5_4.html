@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Програма шифрування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Введення тексту</h1>
+    <input type="text" id="inputString" placeholder="Введіть рядок для шифрування">
+    <button onclick="encrypt()">Зашифрувати</button>
+
+    <h2>Результат шифрування:</h2>
+    <p id="encryptedText"></p>
+
+    <script>
+        function shuffleMiddle(word) {
+            if (word.length <= 2) return word;
+
+            const first = word[0];
+            const last = word[word.length - 1];
+            let middle = word.slice(1, word.length - 1).split('');
+
+            for (let i = middle.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [middle[i], middle[j]] = [middle[j], middle[i]];
+            }
+
+            return first + middle.join('') + last;
+        }
+
+        function encrypt() {
+            const str = document.getElementById("inputString").value;
+
+            const words = str.split(/\s+/);
+
+            const encryptedWords = words.map(word => shuffleMiddle(word));
+
+            const result = encryptedWords.join(' ');
+
+            document.getElementById("encryptedText").innerText = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифрування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: darkkhaki;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Шифрування тексту</h1>
+    <input type="text" id="inputText" placeholder="Введіть текст">
+    <button onclick="encrypt()">Зашифрувати</button>
+    <h2>Результат:</h2>
+    <p id="encryptedText"></p>
+
+    <script>
+        function encrypt() {
+            const input = document.getElementById("inputText").value;
+            const alphabet = "абвгдеєжзиіїйклмнопрстуфхцчшщьюя";
+            const shiftedAlphabet = "бвгдеєжзиіїйклмнопрстуфхцчшщьюяа";
+
+            let encrypted = '';
+
+            for (let i = 0; i < input.length; i++) {
+                const char = input[i].toLowerCase();
+                const index = alphabet.indexOf(char);
+
+                if (index === -1) {
+                    encrypted += char;
+                } else {
+                    encrypted += shiftedAlphabet[index];
+                }
+            }
+
+            document.getElementById("encryptedText").innerText = "Зашифрований текст: " + encrypted;
+        }
+    </script>
+</body>
+</html>

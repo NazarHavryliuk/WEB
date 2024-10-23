@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <h1>Одновимірний масив</h1>
+    <div id="arrayDisplay"></div>
+    
+    <script>
+        const arrayLength = 15;
+        let array = new Array(arrayLength);
+
+        // Заповнення масиву випадковими числами від 0 до 99
+        for (let i = 0; i < arrayLength; i++) {
+            array[i] = Math.floor(Math.random() * 100);
+        }
+
+        // Виведення початкового масиву
+        document.getElementById("arrayDisplay").innerText = "Масив: " + array.join(", ");
+
+        // Пошук індексу мінімального елемента
+        let minIndex = 0;
+        for (let i = 1; i < arrayLength; i++) {
+            if (array[i] < array[minIndex]) {
+                minIndex = i;
+            }
+        }
+
+        // Якщо мінімальний елемент не останній, міняємо його місцями з наступним
+        if (minIndex < arrayLength - 1) {
+            let temp = array[minIndex];
+            array[minIndex] = array[minIndex + 1];
+            array[minIndex + 1] = temp;
+        }
+
+        // Виведення зміненого масиву
+        document.getElementById("arrayDisplay").innerText += "\nЗмінений масив: " + array.join(", ");
+    </script>
+</body>
+</html>

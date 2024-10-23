@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заміна та Підрахунок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: aquamarine;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Заміна символів та підрахунок літер "F" і "D"</h1>
+    <input type="text" id="inputString" placeholder="Введіть рядок">
+    <button onclick="replaceAndCount()">Обробити</button>
+
+    <h2>Результати:</h2>
+    <p id="replacedStr"></p>
+    <p id="countF"></p>
+    <p id="countD"></p>
+
+    <script>
+        function replaceAndCount() {
+            const str = document.getElementById("inputString").value;
+
+            const replacedStr = str.replace(/\*/g, '++');
+
+            const countF = (replacedStr.match(/F/g) || []).length;
+            const countD = (replacedStr.match(/D/g) || []).length;
+
+            document.getElementById("replacedStr").innerText = "Змінений рядок: " + replacedStr;
+            document.getElementById("countF").innerText = "Кількість 'F': " + countF;
+            document.getElementById("countD").innerText = "Кількість 'D': " + countD;
+        }
+    </script>
+</body>
+</html>
